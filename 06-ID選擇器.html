@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID選擇器</title>
+  <style>
+    /* ID選擇器口訣: 樣式#定義，結構ID調用，只能調用一次，別人切勿使用 */
+    #pink {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div id="pink">麥可.傑克森</div>
+  <div id="pink">pink老師</div> <!-- 這是錯誤的 -->
+</body>
+</html>
