@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09-CSS字體屬性之複合屬性</title>
+  <!-- 想要div文字便傾斜、加粗、字號設置為16像素，並且是微軟正黑體 -->
+  <style>
+    div {
+      /* font-style: italic;
+      font-weight: 700;
+      font-size: 16px;
+      font-family:Microsoft JhengHei; */
+
+      /* 複合屬性:簡寫的方式 節約代碼 有順序規定 不要的屬性可以省略，但是一定要有font-weight與font-family */
+      /* font: font-style font-weight font-size/line-height font-family; */
+      font: italic 700 16px Microsoft JhengHei
+    }
+  </style>
+</head>
+<body>
+  <div>三生三世十里桃花，一心一意百行代碼</div>
+</body>
+</html>

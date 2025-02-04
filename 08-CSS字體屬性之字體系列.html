@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09-CSS字體屬性之字體系列</title>
+  <style>
+    body {
+      font-size: 16px; /* 字體大小 */
+    }
+    /* 標題標籤比較特殊，需要額外指定大小 */
+    h2 {
+      font-family: '微軟正黑體';
+      font-size: 18px;
+      font-weight: 400; /* 這個一樣是變成不需加粗的意思 */
+      /* font-weight: normal; */
+    }
+    p {
+      font-family: 'Microsoft YaHei',Arial, Helvetica, sans-serif;
+    }
+    .bold {
+      /* font-weight: bold; */
+      /* 這個700後面不需加上單位 */
+      /* 實際開發中更提倡使用數字表示加粗或變細 */
+      font-weight: 700;
+    }
+    .italic {
+      font-style: italic;
+    }
+    em {
+      /* 讓傾斜的字體不傾斜 */
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>小螞蟻</h2>
+  <p>我們是一群不偷懶的小工人。</p>
+  <p>搬不動哥哥的故事書，</p>
+  <p>拉不走姊姊的花毛線，</p>
+  <p class="italic">我們來抬小妹妹吃剩下的碎餅屑。</p>
+  <p>下雨了，</p>
+  <p class="bold">有小菌子給我們撐起了最漂亮的傘；</p>
+  <p>過河了，</p>
+  <p>有花瓣兒給我們搖來了最穩當的船。</p>
+  <em>新詩超好看</em> <!-- 傾斜的字體 -->
+</body>
+
+</html>
