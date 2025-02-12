@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 生成標籤 div + tab -->
+  <div></div>
+
+  <!-- 生成多個標籤，在標籤後面加上*後加上數字 : div*3 + tab -->
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <!-- 有父子集關係，使用> : ul>li +tab  -->
+  <ul>
+    <li></li>
+  </ul>
+
+  <!-- 有兄弟關係，使用+ : div+p + tab -->
+  <div></div>
+  <p></p>
+
+  <!-- 生成帶有類名或id名字的，直接寫. + 名稱 : .demo + tab -->
+  <!-- id生成 : # + 名稱 : #two + tab -->
+  <!-- 默認使用div標籤 -->
+  <div class="demo"></div>
+  <div id="dwo"></div>
+  <!-- 生成不是div標籤，標籤名 + . + 名稱 : p.demo + tab -->
+  <!-- id生成 : p + # + id名 + tab -->
+  <p class="demo"></p>
+  <p id="two"></p>
+
+  <!-- 生成有順序的類名 : .demo$*3 + tab -->
+  <div class="demo1"></div>
+  <div class="demo2"></div>
+  <div class="demo3"></div>
+
+  <!-- 生成的標籤自帶文字 : div{Hello World!} -->
+  <div>Hello World!</div>
+
+  <!-- div{hi}*5 -->
+  <div>hi</div>
+  <div>hi</div>
+  <div>hi</div>
+  <div>hi</div>
+  <div>hi</div>
+
+  <!-- div{$}*5 -->
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</body>
+</html>

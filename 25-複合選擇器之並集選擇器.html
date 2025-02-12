@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25-複合選擇器之並集選擇器</title>
+  <style>
+  /* 要求一: 請把熊大和熊二選出來改為粉紅色 */
+  /* div,
+  p {
+    color: pink;
+  } */
+
+  /* 要求二: 請擺熊大和熊二改為粉紅色，還有小豬一家改為粉紅色 */
+  div, p, .pig li {
+    color: pink;
+  }
+  /* 並集選擇器語法規範，並集選擇器喜歡豎著寫 */
+  /* 一定要注意，最後一個選擇器，不需要加逗號 */
+  </style>
+</head>
+<body>
+  <div>熊大</div>
+  <p>熊二</p>
+  <span>大光頭</span>
+  <ul class="pig">
+    <li>小豬佩佩</li>
+    <li>豬爸爸</li>
+    <li>豬媽媽</li>
+  </ul>
+</body>
+</html>

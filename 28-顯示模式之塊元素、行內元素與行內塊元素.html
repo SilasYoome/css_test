@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>28-顯示模式之塊元素、行內元素與行內塊元素</title>
+  <style>
+    div {
+      width: 200;
+      height: 200px;
+      background-color: pink;
+    }
+
+    span {
+      width: 100px;  /* 無效*/
+      height: 100px;  /* 無效*/
+      background-color: pink;
+    }
+    input {
+      width: 240px;
+      height: 35px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 塊元素 like: h1~h6、p、div、ul、ol、li等，其中div是最典型的塊元素
+  塊元素特點
+  1. 比較霸道，自己獨佔一行 -->
+  <div>我一行，誰都不能搶</div>瑟瑟發鈄
+
+  <!-- 2.高度、寬度、外邊距以及內邊距都可以控制 -->
+  <!-- 查看css -->
+
+  <!-- 3.寬度默認與容器(父級寬度)的100% -->
+  
+  <!-- 4. 一個塊元素可以放塊元素或行元素 -->
+  <div>
+    <div></div>   <!-- 塊元素 -->
+    <span></span>   <!-- 行元素 -->
+  </div>
+
+  <!-- 需注意: 文字類元素內不能使用塊元素 -->
+  <!-- 像是<h1></h1>~<h6></h6> <p></p> -->
+  <p>
+    <div>這裡有問題</div>
+  </p>
+
+
+  <!-- 行元素 like: span strong b em ，其中span是最典型的行內元素 -->
+  <!-- 1. 相鄰的行內元素在一行上，一行上可以顯示多個 -->
+  <span>天氣晴朗</span><strong>天氣很糟</strong>
+  <span>天氣晴朗</span><strong>天氣很糟</strong>
+  <span>天氣晴朗</span><strong>天氣很糟</strong>
+  <br>
+  <!-- 2.高、寬直接設置是無效的
+  3. 默認寬度就是他本身內容的寬度 -->
+
+  <!-- 4. 行內元素只能容納文本或行內元素 -->
+
+  <!-- 例外，請注意: 連接<a>內不能再放連結<a> -->
+  <!-- 特殊情況，連結<a></a>裡可以放塊級元素，但是給<a></a>轉換一下塊級模式最安全 -->
+
+
+  <!-- 行內塊元素 like: img、input、td，同時具有塊元素與行內元素的特點 -->
+  <!-- 1. 與相鄰行內元素(行內塊元素)在一行上，但他們之間會有空白縫隙。一行可以顯示多個(行內元素特點) -->
+  <!-- 2. 默認寬度就是他本身內容的寬度(行內元素特點) -->
+  <!-- 3. 高度、行高、外邊距與內邊距都可以控制(塊元素特點) -->
+  <input type="text">
+  <input type="text">
+</body>
+</html>

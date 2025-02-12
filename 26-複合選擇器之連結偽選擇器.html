@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>26-複合選擇器之連結偽選擇器</title>
+  <style>
+    /* 1.未訪問過的連結 a:link  把沒有點擊過的(訪問過的)連結選出來*/
+    a:link {
+      color: #333;
+      text-decoration: none;
+    }
+
+
+    /* 2.選擇點擊過的(訪問過的) a:vidited */
+    a:visited {
+      color: orange;
+    }
+
+    /* 3.選擇滑鼠經過的那個連結 a:hover */
+    a:hover {
+      color:skyblue;
+    }
+
+    /* 4. a:active 選擇的是我們滑鼠正在按下還沒有彈起滑鼠的那個連結 */
+    a:active {
+      color: green;
+    }
+
+    /* 注意，偽選擇器的創造順序不可改變
+    1.link
+    2.visited
+    3.hover
+    4.active
+
+    記憶口訣: love hate 或者 lv 包包 hao
+
+    因為鏈結在瀏覽器都有預設樣式，因此實際工作中連結都會需要單除指定樣式
+    共作中最常使用的編寫方式 */
+    /* a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #369;
+      text-decoration: underline;
+    } */
+  </style>
+</head>
+<body>
+  <a href="#">小豬佩佩</a>
+  <a href="https://google.com">未知的網站</a>
+</body>
+</html>
