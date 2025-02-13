@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>34-背景圖片位置之方位名詞</title>
+  <style>
+    div {
+      width: 2000px;
+      height: 2000px;
+      background-color: pink;
+      background-image: url(logo/logo.jpg); 
+      background-repeat: no-repeat;
+
+      /* 如果為方向單字，則沒有順序規定 */
+      /* 中上對齊  與 top center相同*/
+      /* background-position: center top;  */
+      
+      /* 右中隊齊 與 center right*/
+      /* background-position: right center; */
+
+      /* 此時，水平一定是靠右對齊，第二個參數y軸省略，那垂直就會是默認居中顯示 */
+      /* background-position: right;*/
+
+      /* 此時，第一個參數一定是top y軸，頂部對齊，第二個參數x軸省略，水平默認居中顯示 */
+      background-position: top;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

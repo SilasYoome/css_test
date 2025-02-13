@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景圖片</title>
+  <style>
+    div {
+      width: 2000px;
+      height: 2000px;
+      background-color: pink;
+      /* 不要落下url() */
+      background-image: url(logo/logo.jpg);    
+      /* background-repeat: no-repeat; */
+
+      /* 默認情況下圖片都是以平鋪的方式顯示 */
+      /* background-repeat: repeat; */
+
+      /* 沿著x軸平舖 */
+      /* background-repeat: repeat-x; */
+
+      /* 沿著y軸平舖 */
+      background-repeat: repeat-y;
+      /* 頁面元素既可以添加背景顏色，也可以添加背景圖片，只不過背景圖片會壓住背景圖片 */
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
