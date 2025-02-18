@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景半透明</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      /* background-color: black; */
+      /* 前三個為rgb數值，最後一個為alpha透明度，取值範圍在0~1之間 */
+      /* background: rgba(0, 0, 0, 0.3); */
+      /* 小數點習慣前面0去掉，寫成.x */
+      background: rgba(0, 0, 0, .3);
+      /* 背景半透明是紙盒子背景透明度，不是文字透明度 */
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
