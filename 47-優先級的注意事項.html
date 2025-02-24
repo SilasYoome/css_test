@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>47-優先級的注意事項</title>
+  <style>
+    /* 父親的權重是100 or 無限大 */
+    #father {
+      color: red!important;
+    }
+
+    /* p繼承權種為0
+    所以以後我們看標籤到底執行哪個樣式，
+    就先看這個標籤有沒有直接被選出來 */
+    p {
+      color: pink;
+    }
+
+    body {
+      color:red;
+    }
+    /* a連結，瀏覽器默認制定的一個樣式，
+    藍色的，有下劃線 
+    a{color:blue} */
+    a {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id=""father>
+    <p>你還是很好看</p>
+  </div>
+  <a href="#">我是單獨的樣式</a>
+</body>
+</html>

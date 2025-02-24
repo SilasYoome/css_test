@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行高的繼承</title>
+  <style>
+    body {
+      color: pink;
+      /* font: 12px/24px 'Microsoft JhengHei'; */
+      font: 12px/1.5 'Microsoft JhengHei';
+    }
+    div {
+      /* 子元素繼承父元素body的行高 1.5 */
+      /* 這個1.5就是當前元素文字大小 font-size 的1.5倍 */
+      /* 所以當前的div行高就是 14 * 1.5 = 21相素 */
+      font-size: 14px;
+    }
+    p {
+      /* 當前行高為16 * 1.5 = 24 px */
+      font-size: 16px;
+    }
+    /* li 沒有手動指定文字大小，則會繼承父親的文字大小，
+    body 12px
+    所有body的文字大小為 12px ，而行高為 12 * 1.5 = 18px
+    
+    所以li行高大小為1 8px*/
+  </style>
+</head>
+<body>
+  <div>粉紅色的回憶</div>
+  <p>粉紅色的回憶</p>
+  <ul>
+    <li>我沒有指定文字大小</li>
+  </ul>
+</body>
+</html>

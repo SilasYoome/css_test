@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>46-CSS三大特性之優先級</title>
+  <style>
+    /* 選擇器優先級
+    ========================================
+    選擇器                    選擇器權重
+    繼承 或者 *               0,0,0,0
+    元素選擇器                0,0,0,1
+    類選擇器、偽類選擇器       0,0,1,0
+    ID選擇器                  0,1,0,0
+    行內樣式style=""          1,0,0,0
+    !important               ∞ 
+    ========================================
+    */
+    div {
+      color: pink!important;
+    }
+    .test {
+      color: red;
+    }
+    #demo {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="test" id="demo" style="color: purple;">你笑起來真好看</div>
+</body>
+</html>

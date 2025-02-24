@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>43-CSS層疊性</title>
+  <style>
+    div {
+      color: red;
+      font-size: 12px;
+    }
+
+    /* 會優先顯示此顏色 */
+    /* 但文字大小會顯示上方的12px */
+    div {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div>css的層疊特性</div>
+</body>
+</html>

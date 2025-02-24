@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>48-優先級之權重疊加</title>
+  <style>
+    /* li 的權重是0,0,0,1 */
+    li {
+      color: red;
+    }
+
+    /* 複合選擇器會有權重疊家的問題 */
+    /* 權重雖然會疊加，但永遠不會有進位 */
+    /* ul li 的權重是0,0,0,1 + 0,0,0,1 = 0,0,0,2 */
+    ul li {
+      color: green;
+    }
+
+    /* .nav li 權重 0,0,1,0 + 0,0,0,1 = 0,0,1,1 */
+    .nav li {
+      color: pink;
+    }
+  </style>
+</head>
+<body>
+  <ul class="nav">
+    <li>豬耳朵</li>
+    <li>豬腳</li>
+    <li>豬尾巴</li>
+  </ul>
+</body>
+</html>
