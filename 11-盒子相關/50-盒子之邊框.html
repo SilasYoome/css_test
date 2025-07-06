@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50-盒子之邊框</title>
+  <style>
+    div {
+      width: 300px;
+      height: 200px;
+
+      /* border-width:邊框的粗細，一般情況下都用px為單位 */
+      border-width: 5px;
+
+      /* border-style: 邊框樣式
+      solid : 實線邊框
+      dashed : 虛線邊框
+      dotted : 點線邊框 */
+      border-style: solid;
+
+      /* border-color : 邊框顏色 */
+      border-color: pink;
+
+      /* 邊框的簡寫，沒有順序規定 */
+      border: 1px solid pink;
+
+      /* 上下邊框樣式改變
+      border-top : 改變上邊框樣式
+      border-bottom : 改變下邊框樣式 */
+      border-top: 5px solid red;
+      border-bottom: 10px dashed purple;
+
+      /* 功課 : 大小為200*200的盒子，設置上邊框為紅色，其餘邊框為藍色 */
+      width: 200px;
+      height: 200px;
+      border: 5px solid blue;
+      /* 層疊性 */
+      border-top: 5px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

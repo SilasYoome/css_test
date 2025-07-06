@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>57-小米側邊欄修改</title>
+  <style>
+    a {
+      display: block;
+
+      /* width: 230px; 若用內縮的話，寬度設為230沒有問題 */
+      /* 但在使用padding(內邊距)的情況下，盒子會往左生長padding值的px，因此一開始的寬度要扣掉內邊距的寬度 */
+      width: 200px; /* 230 - 30 = 200 */
+      height: 40px;
+      line-height: 40px; /* 讓行高等於盒子高度，即可達成垂直居中 */
+
+      font-weight: 700;
+      font-size: 14px;
+
+      /*text-indent: 2em; /* 文字內縮 */
+      padding-left: 30px;
+      text-decoration: none;
+
+      background-color: gray;
+      color: white;
+    }
+    a:hover{
+      background-color: #ff6700;
+    }
+  </style>
+</head>
+<body>
+  <a href="#">手機 電話卡</a>
+  <a href="#">電視 盒子</a>
+  <a href="#">筆記型電腦 平板</a>
+  <a href="#">出行 穿戴</a>
+  <a href="#">智能 路由器</a>
+  <a href="#">健康 兒童</a>
+  <a href="#">耳機 音響</a>
+</body>
+</html>

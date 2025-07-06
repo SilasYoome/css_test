@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>63-清除內外邊距</title>
+  <style>
+    /* '*' 代表全域 */
+    /* 這句話也是我們css的第一行程式碼 */
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    span {
+      background-color: pink;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- 在chrome中會預設顯示
+  123
+      abcd
+
+  這時就要優先刪除內外邊距的內容
+  -->
+  123
+  <ul>
+    <li>abcd</li>
+    <span>行內元素盡量只設置左右的內外邊距</span>
+  </ul>
+</body>
+</html>

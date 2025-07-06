@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>62-外邊距合併-嵌套塊級元素垂直外邊距塌陷</title>
+  <style>
+    .father {
+      width: 400px;
+      height: 400px;
+      background-color: purple;
+      margin-top: 50px;
+
+      /* border: 1px solid red; 解決辦法 1. 加上紅框 */
+      border: 1px solid transparent; /* 解決辦法 1. 加上透明框 */
+
+      padding: 1px; /* 解決辦法2. 加上內邊距 */
+
+      overflow: hidden; /* 解決辦法 3. 加上overflow: hidden; */
+    }
+    .son {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      
+      /* 當子元素的外邊距比父元素的外邊距大時，父元素會跟著子元素形成有一樣的外邊距，這稱作是塌陷 */
+      margin-top: 100px;
+
+      /* 解決辦法 */
+      /* 1. 為父元素定義上邊框
+      2. 為父元素定義上邊距
+      3. 為父元素加上overflow: hidden; */
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+</html>

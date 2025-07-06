@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>52-邊框會影響盒子的實際大小</title>
+  <style>
+    /* 需要一個200*200的盒子，但是這個盒子有10px的紅色邊框 */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      border: 10px solid red;
+      /* 這樣盒子的實際大小要加上 左右上下的10px邊框寬度
+      所以盒子實際大小會是220 * 220 px */
+
+      /* 若要改善此狀況:
+      1. 測量盒子時不要量邊框
+      2.測量時包含邊框，width/height要減去邊框寬度 */
+      width: 180px;
+      height: 180px;
+
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

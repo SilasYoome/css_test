@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60-塊級盒子水平居中對齊</title>
+  <!-- 幾個條件一定要達成
+  1. 盒子必須指定了寬度(width)
+  2. 盒子左右的外邊距都設置為auto -->
+
+  <!-- 置中對齊有三種寫法
+  1. margin-left:auto; margin-right:auto;
+  2. margin: auto;
+  3. margin: 0 auto;    -> 此方法最常使用
+  -->
+
+  <style>
+    .header {
+      width: 900px;
+      height: 200px;
+      background-color: pink;
+      /* margin: 0 auto; 盒子水平置中 */
+      margin: 100px auto; /* 上下 左右 */
+    }
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+</body>
+</html>

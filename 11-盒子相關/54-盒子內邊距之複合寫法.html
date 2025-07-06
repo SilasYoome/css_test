@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>54-盒子內邊距之複合寫法</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      padding-left: 5px;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      /* 內邊具有複合寫法(簡寫) */
+      padding: 5px;                 /* 1個值，代表上下左右都有5px內邊距 */
+      padding: 5px 10px;            /* 2個值，代表上下邊距5px，左右10px*/
+      padding: 5px 10px 20px;       /* 3個值，代表上內邊距為5px，左右內邊距為10px，下內邊距為20px */
+      padding: 5px 10px 20px 30px;  /* 4個值，代表上內邊距是5px，右內邊距是10px，下內邊距是20px，左內邊距是30px  順時針*/
+    }
+  </style>
+</head>
+<body>
+  <div>
+    盒子內容是content
+    盒子內容是content
+    盒子內容是content
+    盒子內容是content
+  </div>
+</body>
+</html>

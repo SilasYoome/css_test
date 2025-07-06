@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>padding不會影響盒子大小的情況</title>
+  <style>
+    /* 只指定高度，沒有指定寬度，則自動莫認為父親的寬度，且padding不會撐開盒子 */
+
+    h1 {
+      /* width: 100%; */ /* 但是加上了width，即使是100%，也會受到padding撐大 */
+      height: 200px;
+      background-color: pink;
+      padding: 30px;
+    }
+
+    /* 子類別p默認與父親div寬度一樣，所以默認是100%，*/
+    /* 同樣的沒有設定width則不會受到padding影響撐大盒子 */
+    div {
+      width: 300px;
+      height: 200px;
+      background-color: purple;
+    }
+    div p {
+      /* width: 100%; */
+      padding: 30px;
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <h1></h1>
+  <div>
+    <p></p>
+  </div>
+</body>
+</html>

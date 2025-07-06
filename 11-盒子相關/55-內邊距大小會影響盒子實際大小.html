@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>55-內邊距大小會影響盒子實際大小</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      padding: 20px;
+      /* 這樣此時的div會是240 * 240的大小
+      長寬+內邊距大小 = 200 + 20*2 = 240 (內邊距為左右兩邊) */
+
+      /* 若要避免這狀況，盒子的長框則須減掉內邊距 */
+      /* 200 - 20*2 = 160 */
+      width: 160px;
+      height: 160px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    內邊距大小會影響盒子實際大小
+    內邊距大小會影響盒子實際大小
+    內邊距大小會影響盒子實際大小
+    內邊距大小會影響盒子實際大小
+  </div>
+</body>
+</html>
