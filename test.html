@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ROSMAZE研習課程重點整理</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .code-container {
+      position: relative;
+      background-color: #f3fef3;
+      border: 1px solid #dcdcdc;
+      border-radius: 5px;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      overflow: auto;
+    }
+
+    .code-container pre {
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .code-container:hover .copy-button {
+      opacity: 1;
+    }
+
+    p code {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.95em;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <h2>ROSMAZE研習課程重點整理</h2>
+    <h3>ROSMAZE教學影片網址：</h3>
+    <p><a href="https://www.youtube.com/watch?v=r3wX-sEoLgY&list=PLdBzJzfRQ8bclgvZGrInkJN_n6D2qOR6Q"
+        target="_blank">https://www.youtube.com/watch?v=r3wX-sEoLgY&list=PLdBzJzfRQ8bclgvZGrInkJN_n6D2qOR6Q</a></p>
+
+    <h3>影片一：</h3>
+    <p>競賽介紹、ROSMAZE硬體介紹。</p>
+
+    <h3>影片二：</h3>
+    <p>為什麼用ROS，機器人位置、距離終點位置、可以往哪走，里程計、光雷達、地圖。</p>
+
+    <h3>影片三：</h3>
+    <p>ROS2介紹，便於協作，加速整合時間。</p>
+
+    <h3>影片四：</h3>
+    <p>ROS2提供的功能，nodes節點、topics主題、services服務、actions動作、parameters參數。</p>
+
+    <h3>影片五：</h3>
+    <p>實際連線ROSMZAE(硬體連接)、AP Mode連線(預設)、用網路線連線、Wi-Fi Mode</p>
+    <ol>
+      <li>
+        <p> Mode連線：</p>
+        <p>帳號：</p>
+        <div class="code-container">
+          <pre><code>rosmaze-23-08-xx</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+        <p>密碼：</p>
+        <div class="code-container">
+          <pre><code>12345678</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>MobaXterm遠端連線(安裝)</p>
+        <p>帳號：</p>
+        <div class="code-container">
+          <pre><code>ros2bot</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+        <p>密碼：</p>
+        <div class="code-container">
+          <pre><code>12345678</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+      </li>
+      <li>
+        <p>Wi-Fi Mode改回AP Mode方法：</p>
+        <ol>
+          <li>
+            <p>用有線方式登入(參考影片5)</p>
+          </li>
+          <li>
+            <p>輸入 sudo systemctl enable create_ap 啟用AP模式</p>
+          </li>
+          <li>
+            <p>拔網路線，重開機</p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+
+    <h3>影片六：</h3>
+    <p>控制ROSMAZE，介紹里程計。</p>
+    <div class="code-container">
+      <pre><code>192.168.50.1</code></pre>
+      <button class="copy-button" onclick="copyCode(this)">複製</button>
+    </div>
+    <ol>
+      <li>
+        <p>啟動車子移動控制node： (成功啟動會出現電池電壓顯示)</p>
+        <div class="code-container">
+          <pre><code>ros2 run ominibot_hv ominibot_hv_control</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>再開一個SSH連線終端，啟動鍵盤控制node： (成功啟動會出現鍵盤操作九宮格提示)</p>
+        <div class="code-container">
+          <pre><code>ros2 run rosmaze_teleop_keyboard rosmaze_teleop_keyboard</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+      </li>
+    </ol>
+
+    <h3>影片七：</h3>
+    <p>查詢與顯示工具，啟動光學雷達(官方有提供)。</p>
+    <ol>
+      <li>
+        <p>開一個新的SSH 連線終端，輸入指令查看正在執行的node (文字模式)</p>
+        <div class="code-container">
+          <pre><code>ros2 node list</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+        <div class="code-container">
+          <pre><code>ros2 topic list</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>(圖形模式)</p>
+        <div class="code-container">
+          <pre><code>rqt</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>開一個新的SSH 連線終端, 輸入指令啟動光學雷達： (成功啟動光學雷達會轉動起來)</p>
+        <div class="code-container">
+          <pre><code>ros2 launch rplidar_ros rplidar_a2m12_launch.py</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>開一個新的SSH 連線終端，輸入rviz2 指令，查看光學雷達的感測結果。</p>
+        <div class="code-container">
+          <pre><code>rviz2</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>選左下的<code>Add/By topic</code>選擇<code>/LaserScan</code></p>
+      </li>
+      <li>
+        <p><code>Fixed Frame</code> 參數修改為<code>laser</code> (觀看視角)</p>
+      </li>
+      <li>
+        <p>可在<code>LaserScan/Size(m)</code>改光點大小，如0.03或0.05</p>
+    </ol>
+
+    <h3>影片八：</h3>
+    <p>介紹Launch與URDF</p>
+    <ol>
+      <li>
+        <p>光學雷達的Launch檔位置：</p>
+        <div class="code-container">
+          <pre><code>ros2_ws/src/rplidar_ros/launch/rplidar_a2m12_launchpy</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>Unified Robot Description Format (統一機器人描述格式) </p>
+        <p>位置：</p>
+        <div class="code-container">
+          <pre><code>/home/ros2bot/ros2_ws/src/rosmaze/descrption/rprobot_core.xacro</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+    </ol>
+
+    <h3>影片九：</h3>
+    <p>啟動ROSMAZE上面的功能</p>
+    <ol>
+      <li>
+        <p>底盤+URDF+光學雷達的launch</p>
+        <div class="code-container">
+          <pre><code>ros2 launch rosmaze ominibot_rplidar_launch.py</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+      </li>
+      <li>
+        <p>啟動rviz</p>
+        <div class="code-container">
+          <pre><code>rviz2 -d rviz_config.rviz</code></pre>
+          <button class="copy-button" onclick="copyCode(this)">複製</button>
+        </div>
+        <p>裏面的RobotModel指的是URDF機器人造型，
+          <code>LaserScan</code>是光學雷達 ，map和odometry是之後會用到， TF是指每個座標之間相依關係
+        </p>
+      </li>
+    </ol>
+
+
+    <li>
+      <p></p>
+      <div class="code-container">
+        <pre><code></code></pre>
+        <button class="copy-button" onclick="copyCode(this)">複製</button>
+      </div>
+    </li>
+
+    <div class="code-container">
+      <pre><code>$ sudo apt install software-properties-common
+$ sudo add-apt-repository universe</code></pre>
+      <button class="copy-button" onclick="copyCode(this)">複製</button>
+    </div>
+
+    <p>完成後即可安裝來自 Universe 的套件。</p>
+  </div>
+
+  <script>
+    function copyCode(button) {
+      const codeBlock = button.previousElementSibling;
+      const text = codeBlock.innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        button.textContent = "已複製！";
+        setTimeout(() => {
+          button.textContent = "複製";
+        }, 2000);
+      }).catch(err => {
+        console.error("複製失敗：", err);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
